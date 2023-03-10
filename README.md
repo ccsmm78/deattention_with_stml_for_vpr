@@ -78,11 +78,12 @@ To train baseline (vgg16+netvlad) including existing attention networks, run
 You need a pretrained weight of MobileNet which is used for a semantic guidance of our deattention network.
 Download weight_semantic_guidance.tar.gz from https://drive.google.com/file/d/10d0hykoqynYZZU9SDJXyKihQ0-TxhWMT/view?usp=share_link"
 
-	tar -zxvf weight_semantic_guidance.tar.gz
+	$ cd deattention_with_stml_for_vpr
+	$ tar -zxvf weight_semantic_guidance.tar.gz
 
-Then you've got image\_retrieval\_deatt/pretrained/
+Then you've got ./deattention_with_stml_for_vpr/pretrained/
 
-Next, to train our deattetion and sTML, run
+Next, to train our deattention and sTML, run
 
 	$ ./1run_train_our_deattention_with_sTML.sh
 
@@ -94,7 +95,7 @@ To test a previously trained model on the Pittsburgh 30k testset (replace direct
 
 	$ python main.py --mode=test --resume=runsPath/Nov19_12-00-00_vgg16_netvlad --split=test
 
-The commandline arguments for training were saved, so we shouldnt need to specify them for testing.
+The command line arguments for training were saved, so we should not need to specify them for testing.
 Additionally, to obtain the 'off the shelf' performance we can also omit the resume directory:
 
 	$ python main.py --mode=test
@@ -103,9 +104,10 @@ To test our previously trained model with the Pittsburgh 30k\_train dataset, dow
 https://drive.google.com/file/d/1xYxgii_iZogGWtKqLTQF2XlCfYguj1CY/view?usp=share_link" .
 And copy the weight\_image\_retrieval.tar.gz to top of git dir, run 
 
+	$ cd deattention_with_stml_for_vpr
 	$ tar -zxvf weight_image_retrieval.tar.gz
 
-Then you've got image\_retrieval\_deatt/pretrained/
+Then you've got ./deattention_with_stml_for_vpr/pretrained/
 
 Next, run the following script to test networks with our pretrained weights.
 	
