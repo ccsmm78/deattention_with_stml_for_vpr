@@ -21,7 +21,7 @@ You can reproduce the results by following the instruction using two bash script
 | baseline + senet [5]           | 87.2  | 95.5 |
 | baseline + de-attention (ours)        | 89.3  | 96.6 |
 | baseline + de-attention + sTML (ours) | 90.3  | 96.7 |
- 
+
 
 # Setup
 
@@ -49,11 +49,17 @@ and the dataset specifications for the Pittsburgh dataset (available [here](http
 
 # Usage
 
+After git clone https://github.com/ccsmm78/deattention_with_stml_for_vpr.git , you need to run following once. All script here is bash shell script.
+
+```
+$ ./9setup.sh
+```
+
 `main.py` contains the majority of the code, and has three different modes (`train`, `test`, `cluster`) which we'll discuss in mode detail below.
 
 ## Cluster
 
-In order to initialise the NetVlad layer we need to first sample from the data and obtain `opt.num_clusters` centroids. This step is
+In order to initialize the NetVlad layer we need to first sample from the data and obtain `opt.num_clusters` centroids. This step is
 necessary for each configuration of the network and for each dataset. To cluster simply run
 
     $ ./0run_clustering.sh
