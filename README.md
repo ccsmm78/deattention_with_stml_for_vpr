@@ -1,6 +1,6 @@
 # Semantic-Guided De-Attention with Sharpened Triplet Marginal Loss for Visual Place Recognition
 
-(*This manuscript is undergoing a second review process since being submitted to the Pattern Recognition Journal in August 2022. Manuscript Number: PR-D-22-01909R1*)
+(*This manuscript is undergoing a third review process since being submitted to the Pattern Recognition Journal in August 2022. Manuscript Number: PR-D-22-01909R1*)
 
 Implementation of  "Semantic-Guided De-Attention with Sharpened Triplet Marginal Loss for Visual Place Recognition" in PyTorch, including code for training the model on the Pittsburgh dataset.
 
